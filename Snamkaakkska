@@ -216,9 +216,9 @@ end)
 
 local lib = shared.uiLibrary
 local window = lib:CreateWindow({
-	Name="Ranxware V2 [ALPHA] | MVS Duels",
+	Name="Giddy V1 [ALPHA] | MVS Duels",
 	LoadingTitle="MVS Duels Script Utility",
-	LoadingSubtitle="by: Ranxware V2",
+	LoadingSubtitle="by: Giddy hack V1",
 	ConfigurationSaving={
 		Enabled = false, -- Very confused on why rayfield's config saving doesn't work on my script, so it'll be disabled forever now...
 	}
@@ -229,7 +229,7 @@ local playerTab = window:CreateTab("Player")
 local visualsTab = window:CreateTab("Visuals")
 local miscTab = window:CreateTab("Misc")
 
--- COMBAT --
+-- Combat --
 
 combatTab:CreateSection("Hitbox Configs")
 task.spawn(function()
@@ -353,14 +353,14 @@ task.spawn(function()
 		end
 	})
 	silentAimFOVSize = combatTab:CreateSlider({
-		Name = "FOV Size",
+		Name = "FOV Büyüklüğü",
 		Range = {10,1000},
 		Increment = 10,
 		CurrentValue = 100,
 		Callback = function() end
 	})
 	silentAimFOVVisible = combatTab:CreateToggle({
-		Name = "Show FOV Circle",
+		Name = "Fov cizgisi",
 		CurrentValue = true,
 		Callback = function() end
 	})
@@ -416,7 +416,7 @@ end)
 task.spawn(function()
 	local lightSpeedKnife = {CurrentValue = false}
 	lightSpeedKnife = combatTab:CreateToggle({
-		Name = "Fast Knife",
+		Name = "Hızlı bıçak",
 		CurrentValue = false,
 		Callback = function(value)
 			if value then
@@ -465,7 +465,7 @@ end)
 task.spawn(function()
 	local customGunAnimation = {CurrentValue = false}
 	customGunAnimation = combatTab:CreateToggle({
-		Name = "Custom Gun Animation",
+		Name = "Custom Silah animasyonu",
 		CurrentValue = false,
 		Callback = function(value)
 			if value then
@@ -501,7 +501,7 @@ task.spawn(function()
 	local killauraRange = {CurrentValue = 12}
 	local killauraShowRange = {CurrentValue = true}
 	killaura = combatTab:CreateToggle({
-		Name = "Killaura",
+		Name = "Bullet track",
 		CurrentValue = false,
 		Callback = function(value)
 			if value then
@@ -562,7 +562,7 @@ task.spawn(function()
 		end
 	})
 	killauraRange = combatTab:CreateSlider({
-		Name = "Killaura Range",
+		Name = "Bullet Mesafesi",
 		Range = {4,35},
 		CurrentValue = 12,
 		Increment = 1,
@@ -570,7 +570,7 @@ task.spawn(function()
 		Callback = function() end
 	})
 	killauraShowRange = combatTab:CreateToggle({
-		Name = "Show Aura Range",
+		Name = "bullet çizgisi",
 		CurrentValue = true,
 		Callback = function() end
 	})
@@ -582,7 +582,7 @@ task.spawn(function()
 	local killAllDelay = {CurrentValue = 0.1}
 
 	killAll = combatTab:CreateToggle({
-		Name = "Kill-All",
+		Name = "Herkesi sik",
 		CurrentValue = false,
 		Callback = function(value)
 			usingKillAll = value
